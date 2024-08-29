@@ -31,6 +31,9 @@ describe("Application", () => {
     const imageElement = screen.getByAltText("a person with laptop");
     expect(imageElement).toBeInTheDocument();
 
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
+
     // or  using label
     // const nameElement2 = screen.getByLabelText("Name");
     // expect(nameElement2).toBeInTheDocument();
