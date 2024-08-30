@@ -31,4 +31,18 @@ describe("Skills", () => {
     });
     expect(startLearningButton).not.toBeInTheDocument();
   });
+
+
+  // Add the following test for Start learning displayed after 500ms. By default supports untill 1000ms without timeout.
+  test("Start learning button is eventually displayed", async () => {
+    render(<Skills skills={skills} />);
+    const startLearningButton = await screen.findByRole(
+      "button",
+      {
+        name: "Start learning",
+      },
+      { timeout: 2000 }
+    );
+    expect(startLearningButton).toBeInTheDocument();
+  });
 });
