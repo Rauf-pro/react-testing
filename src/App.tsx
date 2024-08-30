@@ -9,8 +9,8 @@ function App() {
   const skills = ["HTML", "CSS", "JavaScript"];
   return (
     <div className="App">
-      {/* <Application/> */}
-      {/* <Skills skills={skills}/> */}
+      <Application/>
+      <Skills skills={skills}/>
       <Counter/>
     </div>
   );
